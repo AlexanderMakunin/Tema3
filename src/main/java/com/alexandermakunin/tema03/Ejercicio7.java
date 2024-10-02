@@ -1,15 +1,18 @@
 package com.alexandermakunin.tema03;
 import java.util.Scanner;
 
-public class Ejercicio1 {
+public class Ejercicio7 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        float numero;
+        float cuota = 500;
+        int edad;
+        float paga;
         System.out.println("Indique un numero");
-        numero = leer.nextFloat();
-        if (numero % 2 == 0) {
-            System.out.print("Es par");
-        } else {
+        edad = leer.nextInt();
+        if (edad >= 65) {
+            paga = 500 % 50;
+            System.out.print("Tiene que parar " + paga);
+        } else if () {
             System.out.print("Es impar");
         }
     }
