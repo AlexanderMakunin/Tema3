@@ -14,6 +14,6 @@ public class Ejercicio4 {
             System.out.print("La respuesta es " + numero2 + " " + numero);
         } else {
             System.out.print("La respuesta es " + numero + " " + numero2);
-        }
+        }leer.close();
     }
 }

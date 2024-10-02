@@ -11,6 +11,6 @@ public class Ejercicio3 {
             System.out.print("Es mayor de edad");
         } else {
             System.out.print("Es menor de edad");
-        }
+        } leer.close();
     }
 }

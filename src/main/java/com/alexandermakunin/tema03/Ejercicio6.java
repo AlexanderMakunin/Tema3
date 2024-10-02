@@ -20,7 +20,7 @@ public class Ejercicio6 {
         Euros = Euros * 100;
 
         Euro2 = Euros / 200;
-        restos = Euro2 % 200;
+        restos = Euros % 200;
 
         Euro1 = restos / 100;
         restos = restos % 100;
@@ -41,7 +41,7 @@ public class Ejercicio6 {
         restos = restos % 2;
 
         Monedas1 = restos;
-
+        leer.close();
 
         System.out.println("Su cantidad de Euros de monedas son Euros de 2: " + Euro2 + "," + " Euros de 1: " + Euro1 + "," + " centimos de 50: " + Monedas50 + "," + " centimos de 20: " + Monedas20 + "," + " centimos de 10: " + Monedas10 + "," + " centimos de 5: " + Monedas5 + "," + " centimos de 2: " + Monedas2 + "," + " centimos de 1: " + Monedas1);
     }

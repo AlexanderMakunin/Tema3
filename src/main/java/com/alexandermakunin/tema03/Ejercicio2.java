@@ -16,6 +16,6 @@ public class Ejercicio2 {
             System.out.print(numero + "Es menor que" + numero2);
         } else {
             System.out.print("Son iguales" );
-        }
+        } leer.close();
     }
 }

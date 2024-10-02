@@ -12,5 +12,6 @@ public class Ejercicio1 {
         } else {
             System.out.print("Es impar");
         }
+        leer.close();
     }
 }

@@ -14,6 +14,6 @@ public class Ejercicio5 {
             case 7,8 -> System.out.print("Notable");
             case 9,10 -> System.out.print("Sobresaliente");
             default -> System.out.print("Error");
-        }
+        } leer.close();
     }
 }
