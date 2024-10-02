@@ -7,13 +7,27 @@ public class Ejercicio7 {
         float cuota = 500;
         int edad;
         float paga;
+        String socio = "S";
         System.out.println("Indique un numero");
         edad = leer.nextInt();
         if (edad >= 65) {
-            paga = 500 % 50;
-            System.out.print("Tiene que parar " + paga);
-        } else if () {
-            System.out.print("Es impar");
-        }
+            paga = cuota * 50 / 100;
+            paga = cuota - paga;
+            System.out.print("Tiene que pagar " + paga);
+        } else if (edad <= 18) {
+            System.out.println("Sus padres son socios? Responda con S afirmativo o N para negativo");
+            socio = leer.next();
+            if (socio.equals("S")) {
+                paga = cuota * 35 / 100;
+                paga = cuota - paga;
+                System.out.print("Tiene que pagar " + paga);
+            } else {
+                paga = cuota * 25 / 100;
+                paga = cuota - paga;
+                System.out.print("Tiene que pagar " + paga);
+            }
+        } else {
+            System.out.print("Tiene que pagar " + cuota);
+        } leer.close();
     }
 }

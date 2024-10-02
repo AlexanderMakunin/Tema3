@@ -14,6 +14,7 @@ public class Ejercicio6 {
         int Monedas5;
         int Monedas2;
         int Monedas1;
+
         System.out.println("Indique cuantos Euros tiene");
         Euros = leer.nextInt();
         Euros = Euros * 100;
@@ -39,9 +40,9 @@ public class Ejercicio6 {
         Monedas2 = restos / 2;
         restos = restos % 2;
 
-        Monedas1 = restos / 1;
-        restos = restos % 1;
+        Monedas1 = restos;
 
-        System.out.println("Su cantidad de Euros de monedas son " + Euros + restos);
+
+        System.out.println("Su cantidad de Euros de monedas son Euros de 2: " + Euro2 + "," + " Euros de 1: " + Euro1 + "," + " centimos de 50: " + Monedas50 + "," + " centimos de 20: " + Monedas20 + "," + " centimos de 10: " + Monedas10 + "," + " centimos de 5: " + Monedas5 + "," + " centimos de 2: " + Monedas2 + "," + " centimos de 1: " + Monedas1);
     }
 }
