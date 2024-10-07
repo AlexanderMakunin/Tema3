@@ -15,7 +15,7 @@ public class Ejercicio4 {
                 System.out.println(resultado);
             }
 
-            }System.out.println(impar);
+            }System.out.println("Hay un total de: " + impar);
         }
 
     }

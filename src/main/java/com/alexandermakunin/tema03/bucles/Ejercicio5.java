@@ -19,7 +19,7 @@ public class Ejercicio5 {
                 SumaM5 = SumaM5 + resultado;
                 par++;
                 M5++;
-            } else if (resultado % 3 == 0 && resultado % 5 == 0) {
+            } else if (resultado % 2 != 0 && resultado % 5 == 0) {
                 System.out.println(resultado + " es impar y multiplo de 5");
                 SumaM5 = SumaM5 + resultado;
                 SumaImpar = SumaImpar + resultado;
