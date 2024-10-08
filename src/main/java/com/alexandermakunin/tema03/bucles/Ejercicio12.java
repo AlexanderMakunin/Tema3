@@ -14,6 +14,12 @@ public class Ejercicio12 {
         int aleatorio = random.nextInt(1,100);
         System.out.println("Una cantidad de intentos");
         intentos = leer.nextInt();
+        if (intentos <= 0){
+            do {
+                System.out.println("Vuelve a intentarlo");
+                intentos = leer.nextInt();
+            } while (intentos <= 0);
+        }
         do{
             System.out.println("Introduzca un numero entre 1 al 100");
             numero = leer.nextInt();
@@ -25,7 +31,7 @@ public class Ejercicio12 {
             } else if (numero < aleatorio) {
                 System.out.println(numero + " es menor que el numero aleatorio");
                 intentos--;
-            }  if (intentos == 0) {
+            }  if (intentos <= 0) {
                 System.out.println("Perdiste");
                 break;
             }
