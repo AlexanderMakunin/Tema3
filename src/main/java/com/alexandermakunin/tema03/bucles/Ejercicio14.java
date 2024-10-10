@@ -2,11 +2,8 @@ package com.alexandermakunin.tema03.bucles;
 
 import java.util.Random;
 
-import java.util.Scanner;
-
 public class Ejercicio14 {
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
         Random random = new Random();
         float num1 = 0;
         float num2 = 0;
@@ -43,6 +40,5 @@ public class Ejercicio14 {
         System.out.println("El % de num4 es: "+num4+"%");
         System.out.println("El % de num5 es: "+num5+"%");
         System.out.println("El % de num6 es: "+num6+"%");
-        leer.close();
     }
 }

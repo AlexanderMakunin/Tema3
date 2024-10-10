@@ -12,7 +12,7 @@ public class Ejercicio10 {
             numero = leer.nextFloat();
             resultado = resultado + numero;
         }
-        while (numero > 0);{
+        while (numero != 0);{
         } System.out.println(resultado);
         leer.close();
     }
