@@ -3,7 +3,6 @@ package com.alexandermakunin.tema03.bucles;
 import java.util.Random;
 
 import java.util.Scanner;
-import java.util.Random;
 
 public class Ejercicio12 {
     public static void main(String[] args) {
@@ -11,7 +10,7 @@ public class Ejercicio12 {
         int numero;
         int intentos;
         Random random = new Random();
-        int aleatorio = random.nextInt(1,100);
+        int aleatorio = random.nextInt(1,101);
         System.out.println("Una cantidad de intentos");
         intentos = leer.nextInt();
         if (intentos <= 0){

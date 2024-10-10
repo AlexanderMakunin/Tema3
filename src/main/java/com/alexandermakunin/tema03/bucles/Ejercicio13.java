@@ -3,7 +3,6 @@ package com.alexandermakunin.tema03.bucles;
 import java.util.Random;
 
 import java.util.Scanner;
-import java.util.Random;
 
 public class Ejercicio13 {
     public static void main(String[] args) {
