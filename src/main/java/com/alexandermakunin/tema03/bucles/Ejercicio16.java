@@ -39,7 +39,7 @@ public class Ejercicio16 {
                         System.out.println("Sacaste: " + dado);
                         System.out.println("Tienes actualmente: " + ManoPlayer + " puntos");
                         if (ManoPlayer > 11) {
-                            System.err.println("Perdiste la ronda");
+                            System.err.println("Perdiste la ronda, el ordenador consiguio: " + ManoIa);
                             PorrasIa = PorrasIa + 1;
                             break;
                         } else if (ManoPlayer == 11) {
