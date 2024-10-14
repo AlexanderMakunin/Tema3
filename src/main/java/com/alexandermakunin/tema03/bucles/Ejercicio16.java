@@ -29,7 +29,7 @@ public class Ejercicio16 {
             System.out.println("Tienes esta cantidad de porras: " + PorrasPlayer);
             System.out.println("El ordenador tiene esta cantidad de porras: " + PorrasIa);
             System.out.println("Tienes esta cantidad de puntos: " + ManoPlayer);
-            System.out.println("Que quieres hacer?");
+            System.out.println("Que quieres hacer? (Escriba Jugar para jugar y Pasar para pasar turno)");
             String accion = leer.nextLine();
             switch (accion) {
                 case JUGAR: {
