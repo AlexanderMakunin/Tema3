@@ -14,7 +14,7 @@ public class Ejercicio5 {
             } else{
                 color = color + 1;
             }
-            System.out.printf("\u001B[0;"+color+"m"+"%9s\n"+"\u001B[0m",a);
+            System.out.printf("\u001B[0;"+color+"m%9s\n"+"\u001B[0m",a);
         }
     }
 }
