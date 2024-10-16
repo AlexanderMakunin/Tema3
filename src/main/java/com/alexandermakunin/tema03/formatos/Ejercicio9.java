@@ -7,13 +7,14 @@ public class Ejercicio9 {
         Scanner leer = new Scanner(System.in);
         final String ESC = "\u001B[";
         final String Exit = ESC + "0m";
-        /*
+
         //ciudad
         String ciudad;
         //introducir la ciudad;
         System.out.println("Introduzca el año");
         ciudad = leer.nextLine();
         System.out.println(ciudad);
+
         //fecha
         int dia;
         int mes;
@@ -36,6 +37,7 @@ public class Ejercicio9 {
             }
         } while (dia <= 0 || dia >= 32);
         System.out.printf("La fecha es: %02d:%02d:%04d\n",dia,mes,anyo);
+        /*
         //hora de medida
         int h;
         int m;
@@ -64,34 +66,69 @@ public class Ejercicio9 {
         } while (s <= 1 || s >= 60);
         System.out.printf("La hora es: %02d:%02d:%02d\n",h,m,s);
         //velocidad del viento
-        */
+
         int VelocidadViento;
         System.out.println("Introduzca la velocidad del viento");
         VelocidadViento = Integer.parseInt(leer.nextLine());
-        if (VelocidadViento <= 30){
-            System.out.printf(ESC + "32m%d Km/h\n"+ Exit,VelocidadViento);
-        } //"\u001B[0;32;m%d Km/h\n"+"\u001B[0m",VelocidadViento, Alex recuerda que puedes poner solo x+m para que salga el color que quieres
-        System.out.printf("%d Km/h",VelocidadViento);
+        if (VelocidadViento <= 29){
+            System.out.printf(ESC + "32m%d"+ Exit +" Km/h\n"+ Exit,VelocidadViento);
+        } else if (VelocidadViento <= 60) {
+            System.out.printf(ESC + "33m%d"+ Exit +" Km/h\n"+ Exit,VelocidadViento);
+        } else if (VelocidadViento > 60) {
+            System.out.printf(ESC + "31m%d"+ Exit +" Km/h\n"+ Exit,VelocidadViento);
+        }  //"\u001B[0;32;m%d Km/h\n"+"\u001B[0m",VelocidadViento, Alex recuerda que puedes poner solo x+m para que salga el color que quieres
         //Temperatura
         float temperatura;
         System.out.println("Introduzca la temperatura");
         temperatura = Float.parseFloat(leer.nextLine());
-        System.out.printf("%f ºC",temperatura);
+        if (temperatura<23){
+            System.out.printf(ESC + "34m%.02f"+ Exit + " ºC\n",temperatura);
+        } else if (temperatura <28) {
+            System.out.printf(ESC + "32m%.02f"+ Exit + " ºC\n",temperatura);
+        } else if (temperatura<36) {
+            System.out.printf(ESC + "33m%.02f"+ Exit + " ºC\n",temperatura);
+        } else {
+            System.out.printf(ESC + "31m%.02f"+ Exit + " ºC\n",temperatura);
+        }
         //Presión atmosférica
         float hPa;
         System.out.println("Introduzca la presión atmosférica");
         hPa = Float.parseFloat(leer.nextLine());
-        System.out.printf("%f ºhPa",hPa);
+        System.out.printf("%.1f hPa\n",hPa);
         //% de lluvia
         int lluvia;
+        String proabilidad = "%";
         System.out.println("Introduzca la % de lluvia");
         lluvia = Integer.parseInt(leer.nextLine());
-        System.out.println(lluvia+"%");
+        if (lluvia>=71) {
+            System.out.printf(ESC + "31m%d"+ Exit + " %s\n",lluvia,proabilidad);
+        } else if (lluvia <= 70) {
+            System.out.printf(ESC + "33m%d"+ Exit + " %s\n",lluvia,proabilidad);
+        } else if (lluvia<35){
+            System.out.printf(ESC + "32m%d"+ Exit + " %s\n",lluvia,proabilidad);
+        }
         //UVI
+
+
         int UVI;
         System.out.println("Introduzca el índice de radiación ultravioleta");
         UVI = Integer.parseInt(leer.nextLine());
-        System.out.println(UVI);
+        if (UVI>10) {
+            System.out.printf(ESC + "35m%d"+ Exit + " \n",UVI);
+        } else if (UVI >= 8) {
+            System.out.printf(ESC + "31m%d"+ Exit + " \n",UVI);
+        } else if (UVI >=6){
+            System.out.printf(ESC + "33m%d"+ Exit + "\n",UVI);
+        } else if (UVI >=3){
+            System.out.printf(ESC + "34m%d"+ Exit + "\n",UVI);
+        } else if (UVI <=2){
+            System.out.printf(ESC + "32m%d"+ Exit + "\n",UVI);
+        }
         leer.close();
+
+         */
+        System.out.printf(ESC + ";37;44m**DATOS ESTACIÓN METEOROLÓGICA **" + Exit + "\n");
+        System.out.printf("Ciudad: %24s\n", ciudad);
+        System.out.printf("Fecha: %02d/%02d/%04d",dia,mes,anyo);
     }
 }
