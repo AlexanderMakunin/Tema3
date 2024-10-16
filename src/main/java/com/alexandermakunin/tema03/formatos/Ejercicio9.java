@@ -41,39 +41,39 @@ public class Ejercicio9 {
         System.out.println("Introduzca la ciudad");
         ciudad = leer.nextLine();
         //validar la fecha
-            System.out.println("Introduzca el año");
-            anyo = Integer.parseInt(leer.nextLine());
-            do {
-                System.out.println("Introduzca el mes");
-                mes = Integer.parseInt(leer.nextLine());
-                if (mes <= 0 || mes >= 13) {
-                    System.err.println("Vuelve a intentarlo");
-                }
-            } while (mes <= 0 || mes >= 13);
-            do {
-                System.out.println("Introduzca el dia");
-                dia = Integer.parseInt(leer.nextLine());
-                if (dia <= 0 || dia >= 32) {
-                    System.err.println("Vuelve a intentarlo");
-                }
-            } while (dia <= 0 || dia >= 32);
-        //validar hora de medida
+        System.out.println("Introduzca el año");
+        anyo = Integer.parseInt(leer.nextLine());
+        System.out.println("Introduzca el mes");
         do {
-            System.out.println("Introduzca el tiempo en horas");
+            mes = Integer.parseInt(leer.nextLine());
+            if (mes <= 0 || mes >= 13) {
+                System.err.println("Vuelve a intentarlo");
+            }
+        } while (mes <= 0 || mes >= 13);
+        System.out.println("Introduzca el dia");
+        do {
+            dia = Integer.parseInt(leer.nextLine());
+            if (dia <= 0 || dia >= 32) {
+                System.err.println("Vuelve a intentarlo");
+            }
+        } while (dia <= 0 || dia >= 32);
+        //validar hora de medida
+        System.out.println("Introduzca el tiempo en horas");
+        do {
             h = Integer.parseInt(leer.nextLine());
             if (h <= 0 || h >= 24) {
                 System.err.println("Vuelve a intentarlo");
             }
         } while (h <= 1 || h >= 24);
+        System.out.println("Introduzca el tiempo en minutos");
         do {
-            System.out.println("Introduzca el tiempo en minutos");
             m = Integer.parseInt(leer.nextLine());
             if (m <= 0 || m >= 60) {
                 System.err.println("Vuelve a intentarlo");
             }
         } while (m <= 1 || m >= 60);
+        System.out.println("Introduzca el tiempo en segundos");
         do {
-            System.out.println("Introduzca el tiempo en segundos");
             s = Integer.parseInt(leer.nextLine());
             if (s <= 0 || s >= 60) {
                 System.err.println("Vuelve a intentarlo");
@@ -90,7 +90,12 @@ public class Ejercicio9 {
         hPa = Float.parseFloat(leer.nextLine());
         //introducir % de lluvia
         System.out.println("Introduzca la % de lluvia");
-        lluvia = Integer.parseInt(leer.nextLine());
+        do {
+            lluvia = Integer.parseInt(leer.nextLine());
+            if (lluvia <= -1 || lluvia >= 101) {
+                System.err.println("Vuelve a intentarlo");
+            }
+        } while (lluvia <= -1 || lluvia >= 101);
         //introducir uvi
         System.out.println("Introduzca el índice de radiación ultravioleta");
         UVI = Integer.parseInt(leer.nextLine());
@@ -128,12 +133,12 @@ public class Ejercicio9 {
         //pha
         System.out.printf("%-24s %.1f hPa\n",HPA,hPa);
         //lluvia
-        if (lluvia>=71) {
-            System.out.printf("%-24s "+ESC + "31m%d"+ Exit + " %s\n",PL,lluvia,proabilidad);
+        if (lluvia >= 71) {
+            System.out.printf("%-24s " + ESC + "31m%d" + Exit + " %s\n", PL, lluvia, proabilidad);
         } else if (lluvia <= 70) {
-            System.out.printf("%-24s "+ESC + "33m%d"+ Exit + " %s\n",PL,lluvia,proabilidad);
-        } else if (lluvia<35){
-            System.out.printf("%-24s "+ESC + "32m%d"+ Exit + " %s\n",PL,lluvia,proabilidad);
+            System.out.printf("%-24s " + ESC + "33m%d" + Exit + " %s\n", PL, lluvia, proabilidad);
+        } else if (lluvia < 35) {
+            System.out.printf("%-24s " + ESC + "32m%d" + Exit + " %s\n", PL, lluvia, proabilidad);
         }
         //uvi
         if (UVI>10) {
