@@ -119,7 +119,7 @@ public class Ejercicio9 {
         /*
         "\u001B[0;32;m%d Km/h\n"+"\u001B[0m",VelocidadViento, (para yo del futuro) Alex recuerda que puedes poner:
          solo 0-1 n, 30-37 color letra y 40-47 fondo m para que salga el color que quieres
-         */
+        */
         //temperatura
         if (temperatura<23){
             System.out.printf("%-24s "+ESC + "34m%.02f"+ Exit + " ºC\n",Temperatura,temperatura);
